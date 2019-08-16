@@ -1,0 +1,12 @@
+<h1>All VendorSweets</h1>
+
+<ul>
+  <% @vendor_sweets.each do |vendor_sweet| %>
+    <li><%= link_to "#{vendor_sweet.sweet.name} sold by #{vendor_sweet.vendor.name} for $#{vendor_sweet.price.to_f/100}", vendor_sweet %></li>
+  <% end  %>
+</ul>
+
+<%= button_to "New VendorSweet", new_vendor_sweet_path, method: :get %>
+<%= button_to "Show VendorSweets ", vendor_sweets_path, method: :get %>
+<%= button_to "Show Vendors", vendors_path, method: :get %>
+<%= button_to "Show Sweets", sweets_path, method: :get %>

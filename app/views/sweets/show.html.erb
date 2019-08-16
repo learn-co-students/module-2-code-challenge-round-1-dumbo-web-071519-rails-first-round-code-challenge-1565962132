@@ -1,0 +1,23 @@
+<h1>Sweet Show Page</h1>
+<!--7. The sweet's show page should include the sweet's name. -->
+<p>
+Name: <%= @sweet.name %>
+</p>
+
+<!--9. Make each sweet in the list of sweets on the vendor page link to its respective sweet
+ -->
+
+ <h1>Vendors Who Sell This Sweet</h1>
+<ul>
+<% @vendors.each do |vendor| %>
+    <% price = @vendor_sweets.find_by(vendor: vendor).price.to_f / 100 %>
+    <li>
+    <%= link_to "#{vendor.name} - $ #{price} ", vendor_path(vendor) %>
+    </li>
+<% end %>
+</ul>
+
+<%= button_to "New VendorSweet", new_vendor_sweet_path, method: :get %>
+<%= button_to "Show VendorSweets ", vendor_sweets_path, method: :get %>
+<%= button_to "Show Vendors", vendors_path, method: :get %>
+<%= button_to "Show Sweets", sweets_path, method: :get %>

@@ -1,7 +1,12 @@
 <h1>All Sweets</h1>
-
+<!--On the sweet's index page, we should see a list of sweet's names (we've already done this part for you). When a user clicks on a sweet's name, it should take a user to the sweet's show page. -->
 <ul>
   <% @sweets.each do |sweet| %>
-    <li><%= sweet.name %></li>
+    <li><%= link_to sweet.name, sweet%></li>
   <% end  %>
 </ul>
+
+<%= button_to "New VendorSweet", new_vendor_sweet_path, method: :get %>
+<%= button_to "Show VendorSweets ", vendor_sweets_path, method: :get %>
+<%= button_to "Show Vendors", vendors_path, method: :get %>
+<%= button_to "Show Sweets", sweets_path, method: :get %>
