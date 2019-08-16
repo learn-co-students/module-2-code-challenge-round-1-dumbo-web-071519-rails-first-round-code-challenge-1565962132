@@ -1,0 +1,36 @@
+<h1>New Vendor Sweet Page</h1>
+
+<% if(flash[:errors]) %>
+    <ul>
+    <% flash[:errors].each do |error| %>
+        <li><%= error %></li>
+    <% end %>
+    </ul>
+    
+
+
+<% end %>
+
+<p>
+    <%= form_for(@vendor_sweet) do |f| %>
+        <div>
+        <%= f.label(:price) %>
+        <%= f.number_field(:price) %>
+        </div>
+
+        <div>
+        <%= f.label(:vendor_id) %>
+        <%= f.collection_select(:vendor_id, @vendors, :id, :name ) %>
+        </div>
+
+        <div>
+        <%= f.label(:sweet_id) %>
+        <%= f.collection_select(:sweet_id, @sweets, :id, :name ) %>
+        </div>
+
+        <%= f.submit %>
+    <% end %>
+
+</p>
+
+

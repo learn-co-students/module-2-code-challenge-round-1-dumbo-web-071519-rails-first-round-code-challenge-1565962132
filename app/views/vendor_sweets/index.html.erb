@@ -1,0 +1,7 @@
+<h1>Index of Vendor Sweets</h1>
+
+<ul>
+  <% @vendor_sweets.each do |vs| %>
+    <li><%= link_to vs.price, vs %></li>
+  <% end  %>
+</ul>
