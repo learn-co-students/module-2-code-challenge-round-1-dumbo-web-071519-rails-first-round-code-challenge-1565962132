@@ -19,3 +19,10 @@ end
 sweets.each do |sweet|
   Sweet.create(name: sweet)
 end
+
+10.times do 
+  VendorSweet.create(
+    price: rand(20..100), 
+    sweet: Sweet.all.sample, 
+    vendor: Vendor.all.sample)
+end
