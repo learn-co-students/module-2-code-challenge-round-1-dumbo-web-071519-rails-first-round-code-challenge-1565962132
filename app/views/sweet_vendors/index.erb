@@ -1,0 +1,11 @@
+<h1>All the SweetsVendors</h1>
+
+
+<ul>
+  <% @sweet_vendors.each do |sweet| %>
+    <li><%= link_to sweet.name, sweet %></li>
+  <% end  %>
+</ul>
+
+
+<%= link_to "Create a SweetVendor", new_sweet_vendor_path%>

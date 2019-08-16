@@ -1,0 +1,10 @@
+<h1>Show page for a Sweet Vendor</h1>
+
+<p>My name is<%=  @sweet_vendor.name %></p>
+
+<p>I am sold by <%= link_to @sweet_vendor.vendor.name, @vendor %> </p>
+
+
+<%= link_to "Create a SweetVendor", new_sweet_vendor_path%>
+<%= link_to "Back to Sweets", sweets_path%>
+<%= link_to "Back to Vendors", vendors_path%>
