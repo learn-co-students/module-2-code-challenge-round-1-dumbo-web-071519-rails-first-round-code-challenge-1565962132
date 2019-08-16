@@ -1,0 +1,12 @@
+<h1> Vendor: <%= @vendor.name %> </h1>
+
+<h2>Sweets this vendor sells:</h2>
+
+<% @vendor.sweets.each do |sweet| %>
+<ul>
+  <li>
+    <%= link_to sweet.name, sweet %>
+    <br><font color="red" size = "3"><%= "@ price of: #{@vendor_sweet.price} cents each"%><br>
+  </li>
+</ul>
+<% end %>
