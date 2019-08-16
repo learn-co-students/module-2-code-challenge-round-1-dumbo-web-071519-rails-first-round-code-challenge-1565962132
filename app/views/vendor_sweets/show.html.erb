@@ -1,0 +1,20 @@
+<h1>VendorSweet Show Page</h1>
+
+<p>
+    Sweet: <%= link_to @vendor_sweet.sweet.name, sweet_path(@vendor_sweet.sweet) %>
+</p>
+
+<p>
+    Vendor: <%= link_to @vendor_sweet.vendor.name, vendor_path(@vendor_sweet.vendor) %>
+</p>
+
+<p>
+    Price: <%= @vendor_sweet.price %>
+</p>
+
+<%= button_to "Delete VendorSweet", @vendor_sweet, method: :delete %>
+
+<%= button_to "New VendorSweet", new_vendor_sweet_path, method: :get %>
+<%= button_to "Show VendorSweets ", vendor_sweets_path, method: :get %>
+<%= button_to "Show Vendors", vendors_path, method: :get %>
+<%= button_to "Show Sweets", sweets_path, method: :get %>
