@@ -1,0 +1,14 @@
+<p> Price:
+  <%= @vendor_sweet.price %>
+</p>
+
+<p> Vendor:
+  <%= @vendor_sweet.vendor_id %>
+</p>
+
+<p> Sweet:
+  <%= @vendor_sweet.sweet_id %>
+</p>
+
+<%= link_to 'Edit', edit_vendor_sweet_path(@vendor_sweet) %> |
+<%= link_to 'Back', vendor_sweets_path %>

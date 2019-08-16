@@ -1,0 +1,23 @@
+<%= form_for(@vendor_sweet) do |form| %>
+  <% if vendor_sweet.errors.any? %>
+
+      <ul>
+      <% vendor_sweet.errors.full_messages.each do |message| %>
+        <%= message %>
+      <% end %>
+      </ul>
+  <% end %>
+
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  
+
+    <%= form.label :vendor_id %>
+    <%= collection_select(@vendor_sweet, vendor_id, Vendor.all, :id, :name) %>
+
+
+    <%= form.label :sweet_id %>
+    <%= collection_select(@vendor_sweet, sweet_id, Sweet.all, :id, :name) %>
+
+
+<% end %>
