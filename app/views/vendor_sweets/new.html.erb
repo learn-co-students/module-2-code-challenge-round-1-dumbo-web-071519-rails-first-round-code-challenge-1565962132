@@ -1,0 +1,18 @@
+<h1>Add a new sweet to a vendor</h1>
+<%= form_for(@vsweet) do |f| %>
+    <%= f.label :price, "Price (in cents): " %>        
+    <%= f.number_field :price %>        
+    <%= f.label :vendor_id, "Vendor: " %>        
+    <%= f.collection_select :vendor_id, Vendor.all(), :id, :name %>        
+    <%= f.label :sweet_id, "Sweet:" %>        
+    <%= f.collection_select :sweet_id, Sweet.all(), :id, :name %>
+    <%= f.submit "Submit"%>        
+<% end %>
+
+<% if flash[:errors] %>
+    <ul>
+    <% flash[:errors].each do |err| %>
+        <li style="color:red"><%= err %></li>
+    <% end %>
+    </ul>
+<% end %>

@@ -1,0 +1,11 @@
+<h1><%= @sweet.name %></h1>
+<h3>Sold at your local</h3>
+<% if @vendors.length == 0 %>
+    <p>No where, no one wants this sweet 😥</p>
+<% else %>
+    <ul>
+    <% @vendors.each do |vendor| %>
+        <li><%= link_to vendor.name, vendor %></li>
+    <% end %>
+    </ul>
+<% end %>

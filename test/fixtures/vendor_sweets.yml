@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  integer: 
+  sweet: one
+  vendor: one
+
+two:
+  integer: 
+  sweet: two
+  vendor: two
