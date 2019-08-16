@@ -1,0 +1,7 @@
+<h1> Create form</h1>
+<%= render 'form' %>
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+        <%= error %>
+    <% end %>
+<% end %>

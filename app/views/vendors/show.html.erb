@@ -1,0 +1,8 @@
+<h1> Vendor Show page: </h1>
+    <div> Vendor Name: <%= @vendor.name %></div>
+     
+    <h1>  Sweets page: </h1>
+
+<% @vendor.sweets.each do |sweet| %>
+    <%= sweet.name %> <br>
+<% end %>
