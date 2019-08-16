@@ -1,0 +1,24 @@
+<h1>This is the show page for <%= @vendor.name %></h1>
+
+
+
+<p>
+Show Sweets 
+<ul>
+<% @sweets.each do |sweet| %>
+<li>
+    <%= sweet.name %>
+</li>
+
+<% end %>
+
+
+</ul>
+
+
+
+
+
+</p>
+
+<%= link_to "back to index", sweets_path %>
