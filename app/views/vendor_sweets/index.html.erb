@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vendor Sweets</h1>
+
+% @vendor_sweets.each do |vendor_sweet| %>
+        <%= vendor_sweet.price %>
+        <%= vendor_sweet.vendor_id %>
+        <%= vendor_sweet.sweet_id %>
+        <%= link_to 'Show', vendor_sweet %>
+        <%= link_to 'Edit', edit_vendor_sweet_path(vendor_sweet) %>
+    <% end %>
+
+<br>
+
+<%= link_to 'Take me to the candy shop', new_vendor_sweet_path %>
