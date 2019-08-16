@@ -1,0 +1,21 @@
+<h1>Edit VendorSweet Form </h1>
+
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |error_message| %>
+            <li>
+                <%= error_message %>
+            </li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @vendor_sweet do |f| %>
+<%= f.label :sweet_id %>
+<%= f.collection_select :sweet_id, Sweet.all, :id, :name %>
+<%= f.label :vendor_id %>
+<%= f.collection_select :vendor_id, Vendor.all, :id, :name %>
+<%= f.label :price %>
+<%= f.number_field :price %>
+<%= f.submit %>
+<% end %>
