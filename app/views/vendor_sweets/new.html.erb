@@ -1,0 +1,17 @@
+<%= form_with model: @vendorsweets do |form| %>
+
+
+<p> Which?</p>
+
+<%= form.collection_select(:vendorsweets, Vendor.all, :id, :name) %>
+
+
+<p> What kind of sweet?</p>
+
+  <%= form.collection_select(:vendorsweets, Sweet.all, :id, :name) %>
+
+  <%= form.submit %>
+
+<% # I know this isn't right but I can't remember exactly how to do it off by heart :)%>
+<% end %>
+

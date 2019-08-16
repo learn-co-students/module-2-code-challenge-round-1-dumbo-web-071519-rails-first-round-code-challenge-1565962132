@@ -1,0 +1,27 @@
+<h1> Check out this vendor!</h1>
+
+<% if flash[:errors]   %>
+<% flash[:errors].each do |msg|%>
+<li>
+<%= msg %>
+</li>
+<% end  %>
+<% end  %>
+
+<p> Name: <%=@vendor.name%> </p>
+
+<ul>
+<% @vendor.vendor_sweets.each do |vendor_sweet| %>
+<li>
+<%=link_to "#{vendor_sweet.sweet.name} - #{vendor_sweet.price}",
+sweet_path(vendor_sweet.vendor_sweet_id) %>
+<%end%>
+
+<%= #I have an error i've not got before, and I can't display my localhost as a result :( so I'm coding somewhat blindly here soz%>
+
+<%= link_to "Go back", vendors_path%>
+
+
+
+
+
