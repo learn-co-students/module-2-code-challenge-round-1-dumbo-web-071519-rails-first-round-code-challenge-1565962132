@@ -1,0 +1,13 @@
+<h1>All Vendor Sweets🍬</h1>
+
+<ul>
+  <% @vsweets.each do |vsweet| %>
+    <li><%= vsweet.name %></li>
+
+    <p><%= link_to "View Vendor Sweets", vsweets%></p>
+    <p><%= link_to 'Edit', edit_vsweet_path(@vsweet) %></p>
+    <p><%= link_to "Eat", vsweet, method: :delete %></p>
+  <% end  %>
+</ul>
+
+<p><%= link_to 'New VSweet', new_vendor_sweet_path%></p>
