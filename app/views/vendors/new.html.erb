@@ -1,0 +1,17 @@
+<h1>Vendors Form </h1>
+
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |error_message| %>
+            <li>
+                <%= error_message %>
+            </li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @vendor do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.submit %>
+<% end %>
