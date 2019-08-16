@@ -15,9 +15,8 @@ def new
 end
 
 def create
-    
     @vendorsweet = Vendorsweet.new(vendorsweet_params)
-    @vendor = Vendor.find(params[:id])
+    @vendor = @vendorsweet.vendor_id
    if @vendorsweet.valid?
         @vendorsweet.save
         redirect_to vendor_path(@vendor)

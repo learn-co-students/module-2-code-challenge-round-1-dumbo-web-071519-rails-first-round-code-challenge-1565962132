@@ -6,6 +6,7 @@ class VendorsController < ApplicationController
 
   def show
     @vendor = Vendor.find(params[:id])
+    @sweet = Sweet.find(params[:id])
   end
   
 
