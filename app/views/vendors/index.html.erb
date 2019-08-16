@@ -2,6 +2,18 @@
 
 <ul>
   <% @vendors.each do |vendor| %>
-    <li><%= vendor.name %></li>
+    <li><%= link_to vendor.name, vendor  %></li>
   <% end  %>
 </ul>
+
+<h2>List of All Sweets</h2>
+
+<% Sweet.all.each do |sweet|%>
+<li> <%=link_to sweet.name, sweet %>  </li>
+<%end%>
+
+<br>
+
+<li><%= link_to "Create a SweetVendor", new_sweet_vendor_path%></li>
+<li><%= link_to "All Sweets", sweets_path%></li>
+<li><%= link_to "All SweetVendors", sweet_vendors_path%></li>

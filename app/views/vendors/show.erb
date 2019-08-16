@@ -1,0 +1,11 @@
+<h1>A Vendor's Show Page</h1>
+
+<p>Name: <%= @vendor.name %> </p>
+
+
+<h2>List of my sweets</h2>
+
+<% @vendor.sweet_vendors.each do |f| %>
+<li><%= f.sweet.name %></li>
+<% end%>
+

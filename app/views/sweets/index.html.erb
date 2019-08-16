@@ -2,6 +2,13 @@
 
 <ul>
   <% @sweets.each do |sweet| %>
-    <li><%= sweet.name %></li>
+    <li><%= link_to sweet.name, sweet %></li>
   <% end  %>
 </ul>
+
+<h2>List of Vendors</h2>
+
+<% Vendor.all.each do |vendor|%>
+<li><%= link_to vendor.name, vendor %></li>
+
+<%end%>
